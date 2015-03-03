@@ -34,9 +34,17 @@
         display:none;
     }
 
-    #marker {
+    #marker, .markerPoint{
         fill: yellow;
     }
+
+/*    .nofare{
+        display: none;
+    }
+
+    .hasfare{
+        display: block;
+    }*/
 
    
     .areaChart {
@@ -276,3 +284,4 @@
     .badges img {
          margin: 0 5px;
     }
+
