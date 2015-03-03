@@ -38,15 +38,10 @@
         fill: yellow;
     }
 
-/*    .nofare{
+    .nofare{
         display: none;
     }
 
-    .hasfare{
-        display: block;
-    }*/
-
-   
     .areaChart {
         position: absolute;
         bottom: 15px;

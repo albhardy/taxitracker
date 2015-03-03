@@ -126,14 +126,15 @@ var TaxiTracker = {
       currentPathStartPointLatLon = xycoordToLatLon(currentPathStartPoint.x, currentPathStartPoint.y),
       currentPathEndPointLatLon = xycoordToLatLon(currentPathEndPoint.x, currentPathEndPoint.y);
     //ADD START MARKER POINT
-    TaxiTracker.pointsArray.push([d.properties.hasfare]); //Add Data   
+    TaxiTracker.pointsArray.push([d.properties.hasfare]); //Add Data 
+    var hasfare= d.properties.hasfare; 
     var startmarker = TaxiTracker.g.append('circle').attr({
-      r: 5
+      r: 8
     }).data(TaxiTracker.pointsArray).attr("id", function(d) {
       return startmarkerpathid; // Associate Marker to Path
-    }).attr("class", function(d) {
-      console.log("[animatetransition] startmarker id:" + startmarkerpathid + "- class d[hasfare]: " + d[0])
-      if (d[0]) { // Start Marker Class with HasFare property
+    }).attr("class", function(d,i) {
+      console.log("[animatetransition] startmarker id:" + startmarkerpathid + "- class d[hasfare]: " + hasfare)
+      if (hasfare) { // Start Marker Class with HasFare property
         return "startPoint point hasfare";
       } else {
         return "startPoint point nofare";
